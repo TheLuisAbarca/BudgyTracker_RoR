@@ -3,6 +3,6 @@ class Entity < ApplicationRecord
   validates :name, presence: true
   validates :amount, presence: true, numericality: {greater_than_or_equal_to: 0}
 
-  has_many :group_entities, dependent: :destroy
-  has_many :groups, through: :group_entities
+  has_many :groups_entities, dependent: :destroy
+  has_many :groups, through: :groups_entities
 end

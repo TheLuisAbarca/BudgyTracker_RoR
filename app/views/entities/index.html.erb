@@ -3,12 +3,15 @@
 <h1>Entities</h1>
 
 <div id="entities">
+  <p> 
+    <%=@entities.reduce(0) { |sum, entity| sum + entity.amount }%>
+  </p>
   <% @entities.each do |entity| %>
     <%= render entity %>
     <p>
-      <%= link_to "Show this entity", entity %>
+      <%= link_to "Show this entity", group_entity_path(params[:group_id], id: entity.id) %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New entity", new_entity_path %>
+<%= link_to "New entity", new_group_entity_path(params[:group_id]) %>

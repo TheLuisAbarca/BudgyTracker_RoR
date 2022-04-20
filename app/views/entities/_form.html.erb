@@ -1,4 +1,4 @@
-<%= form_with(model: entity) do |form| %>
+<%= form_with(model: entity, url:group_entities_url(params[:group_id])) do |form| %>
   <% if entity.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(entity.errors.count, "error") %> prohibited this entity from being saved:</h2>
@@ -9,6 +9,10 @@
         <% end %>
       </ul>
     </div>
+  <% end %>
+
+  <% Group.where(author_id: current_user.id).each_with_index do |g , i| %>
+        <%= form.check_box :group_ids, {multiple: true}, i, nil %><%= g.name%>
   <% end %>
 
   <div>

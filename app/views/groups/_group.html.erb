@@ -1,12 +1,17 @@
 <div id="<%= dom_id group %>">
-  <p>
-    <strong>Name:</strong>
-    <%= group.name %>
-  </p>
+  <%= link_to group_entities_path(group.id) do %>
+    <p>
+      <strong>Name:</strong>
+      <%= group.name %>
+    </p>
 
-  <p>
-    <strong>Icon:</strong>
-    <%= group.icon %>
-  </p>
+    <p>
+      <%= image_tag group.icon, :size => '100x100' %>
+    </p>
+
+    <p>
+      <%=group.groups_entities.reduce(0) { |sum, group_entity| sum + (group_entity.entity.amount) }%>
+    </p>
+  <% end %>
 
 </div>

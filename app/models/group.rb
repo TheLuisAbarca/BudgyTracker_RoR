@@ -3,6 +3,6 @@ class Group < ApplicationRecord
     validates :icon, presence: true
     validates :name, uniqueness: true
 
-    has_many :group_entities, dependent: :destroy
-    has_many :entities, through: :group_entities
+    has_many :groups_entities, dependent: :destroy
+    has_many :entities, through: :groups_entities
 end
