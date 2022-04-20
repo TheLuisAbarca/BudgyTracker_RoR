@@ -18,8 +18,13 @@
     src: url("../fonts/Proxima-Nova-Bold.otf")
 }
 
+p {
+    margin-bottom: 0px !important;
+}
+
 body{
   font-family: 'proxima-nova-bold' !important;
+  min-width: 327px;
 }
 
 .bg-blue{
@@ -53,7 +58,7 @@ body{
 }
 
 .word-splash{
-   margin-top: 40vh;
+   margin-top: 20vh;
 }
 
 .format-register-btn {
