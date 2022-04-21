@@ -1,12 +1,11 @@
-# frozen_string_literal: true
-
 class EntitiesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_entity, only: %i[show edit update destroy]
 
   # GET /entities or /entities.json
   def index
-    @entities = Entity.joins(:groups_entities).where(groups_entities: { group_id: params[:group_id] }).order(created_at: :desc)
+    @entities = Entity.joins(:groups_entities)
+      .where(groups_entities: { group_id: params[:group_id] }).order(created_at: :desc)
     @group = Group.find(params[:group_id])
   end
 

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class GroupsEntity < ApplicationRecord
   validates :group_id, presence: true
   validates :entity_id, presence: true

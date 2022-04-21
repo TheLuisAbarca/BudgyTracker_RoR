@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'rails_helper'
 
 RSpec.describe Entity, type: :model do
@@ -11,7 +9,7 @@ RSpec.describe Entity, type: :model do
   end
 
   it 'object should be "invalid".' do
-    subject.name =  nil
+    subject.name = nil
     expect(subject).to_not be_valid
   end
 
