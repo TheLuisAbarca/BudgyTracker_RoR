@@ -23,7 +23,7 @@ p {
 }
 
 body {
-  font-family: "proxima-nova-bold", "sans-serif" !important;
+  font-family: "proxima-nova-bold", sans-serif !important;
   min-width: 327px;
 }
 
