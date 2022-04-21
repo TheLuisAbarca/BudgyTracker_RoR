@@ -1,7 +1,12 @@
 # Budgy Tracker
 
+| Mobile version |
+|-----------------|
+| ![App](./readme_imgs/mobile_ver.gif) |
+
 > The Budgy Tracker app is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
+## Live Demo
 
 ## Built With
 
@@ -28,6 +33,8 @@ To get a local copy up and running follow these simple example steps.
 ## Tests
 
 - If you want to run some unit tests, all you need to do is:
+- Execute the seed on the database: 
+- > `rails RAILS_ENV=test db:seed`
 - On your terminal execute:
   > `gem install rspec`
 - Run the `rspec` command in this case over the path of `spec/`, the resulting command will look like this:
@@ -51,7 +58,7 @@ Feel free to check the [issues page](../../issues/).
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-
+- Scpecial thanks to [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) with this [design](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=)
 - Hat tip to anyone whose code was used
 - Inspiration
 - etc
