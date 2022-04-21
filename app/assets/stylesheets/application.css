@@ -64,3 +64,8 @@ body{
 .format-register-btn {
    margin-top: 35vh;
 }
+
+.user-img {
+   height: 100px;
+   width: 100px;
+ }
