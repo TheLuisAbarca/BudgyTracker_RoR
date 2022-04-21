@@ -13,59 +13,59 @@
  *= require_tree .
  *= require_self
  */
- @font-face {
-    font-family: "proxima-nova-bold";
-    src: url(asset-path('Proxima-Nova-Bold.otf') format("opentype"));
+@font-face {
+  font-family: "proxima-nova-bold", "san-serif";
+  src: url('Proxima-Nova-Bold.otf') format('opentype');
 }
 
 p {
-    margin-bottom: 0px !important;
+  margin-bottom: 0 !important;
 }
 
-body{
-  font-family: 'proxima-nova-bold', 'sans-serif' !important;
+body {
+  font-family: "proxima-nova-bold", "sans-serif" !important;
   min-width: 327px;
 }
 
-.bg-blue{
-   background-color: #3978C2 !important;
+.bg-blue {
+  background-color: #3978c2 !important;
 }
 
-.nav-icon-white{
-   font-size: 50px !important;
+.nav-icon-white {
+  font-size: 50px !important;
 }
 
-.bg-gray{
-   background-color: #F0F3F2;
+.bg-gray {
+  background-color: #f0f3f2;
 }
 
-.wrapper-groups-btn { 
-    height: 82vh !important;
-    overflow-y: scroll !important;
+.wrapper-groups-btn {
+  height: 82vh !important;
+  overflow-y: scroll !important;
 }
 
 .shadow {
-   box-shadow: 0px 0px 10px #000000;
+  box-shadow: 0 0 10px #000;
 }
 
-.group-btn{
-    position: absolute;
-    bottom: 0px ;
+.group-btn {
+  position: absolute;
+  bottom: 0;
 }
 
 .nav-login-pg {
-    height: 90px;
+  height: 90px;
 }
 
-.word-splash{
-   margin-top: 20vh;
+.word-splash {
+  margin-top: 20vh;
 }
 
 .format-register-btn {
-   margin-top: 35vh;
+  margin-top: 35vh;
 }
 
 .user-img {
-   height: 100px;
-   width: 100px;
- }
+  height: 100px;
+  width: 100px;
+}
