@@ -1,0 +1,9 @@
+<main class="m-2">
+    <h1 class="word-splash text-center">
+        <%= image_tag ("logoBudgy.png"), alt: "Budgy Tracker Logo", width: "320px", height: "280px" %>
+    </h1>
+    <div class="format-register-btn">
+        <%= button_to 'LOG IN' , new_user_session_path, class: "form-control btn bg-blue text-light p-3", method: :get %>
+        <%= button_to 'SIGN UP' ,new_user_registration_path ,  class: "form-control btn btn-muted p-3", method: :get%>
+    </div>
+</main>

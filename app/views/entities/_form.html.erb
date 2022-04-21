@@ -1,0 +1,31 @@
+<%= form_with(model: entity, url:group_entities_url(params[:group_id]), data: {turbo: false}) do |form| %>
+  <% if entity.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(entity.errors.count, "error") %> prohibited this entity from being saved:</h2>
+
+      <ul>
+        <% entity.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.hidden_field :author_id , value: current_user.id%>
+  </div>
+
+  <div>
+    <%= form.text_field :name, class: "form-control p-3", placeholder: "Name" %>
+  </div>
+
+  <div>
+    <%= form.text_field :amount, class: "form-control p-3", placeholder: "Amount" %>
+  </div>
+
+  <div>
+    <%= button_tag( :class => "group-btn bg-success text-white text-decoration-none form-control p-4 text-center") do %>
+      Save <i class="far fa-save"></i>
+    <% end %>
+  </div>
+<% end %>
