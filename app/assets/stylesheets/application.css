@@ -15,7 +15,7 @@
  */
  @font-face {
     font-family: "proxima-nova-bold";
-    src: url("../fonts/Proxima-Nova-Bold.otf")
+    src: url(asset-path('Proxima-Nova-Bold.otf') format("opentype"));
 }
 
 p {
@@ -23,7 +23,7 @@ p {
 }
 
 body{
-  font-family: 'proxima-nova-bold' !important;
+  font-family: 'proxima-nova-bold', 'sans-serif' !important;
   min-width: 327px;
 }
 
