@@ -1,14 +1,16 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Groups</h1>
+<%= render 'shared/nav', name:"CATEGORIES", path: ""%>
+<%= render 'shared/system_msgs'%>
 
 <div id="groups">
-  <% @groups.each do |group| %>
-    <%= render group %>
-    <p>
-      <%= link_to "Show this group", group %>
-    </p>
-  <% end %>
+  <div class="wrapper-groups-btn">
+    <% @groups.each do |group| %>
+      <%= link_to group do  %>
+        <%= render group %>
+      <% end %>
+    <% end %>
+    <%= link_to new_group_path , class:"group-btn bg-success text-white text-decoration-none form-control p-4 text-center" do %>
+      <i class="fas fa-plus"></i>
+      <span class="">New Category</span>  
+    <% end %>
+  </div>
 </div>
-
-<%= link_to "New group", new_group_path %>

@@ -1,17 +1,11 @@
 <div id="<%= dom_id group %>">
-  <%= link_to group_entities_path(group.id) do %>
-    <p>
-      <strong>Name:</strong>
-      <%= group.name %>
-    </p>
-
-    <p>
-      <%= image_tag group.icon, :size => '100x100' %>
-    </p>
-
-    <p>
-      <%=group.groups_entities.reduce(0) { |sum, group_entity| sum + (group_entity.entity.amount) }%>
-    </p>
+  <%= link_to group_entities_path(group.id), class:"text-decoration-none text-dark shadow" do %>
+    <div class="d-flex justify-content-between align-items-center bg-light m-3 p-2">
+         <%= image_tag group.icon, :size => '100x100' %>
+         <%= group.name %>
+         <span class="fw-bold">
+           $ <%=group.groups_entities.reduce(0) { |sum, group_entity| sum + (group_entity.entity.amount) }%>
+         </span>
+    </div>
   <% end %>
-
 </div>
