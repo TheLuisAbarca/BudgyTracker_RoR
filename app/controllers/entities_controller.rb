@@ -22,7 +22,7 @@ class EntitiesController < ApplicationController
 
   # POST /entities or /entities.json
   def create
-    #@group = Group.find(params[:group_id])
+    # @group = Group.find(params[:group_id])
     @entity = Entity.new(author_id: entity_params[:author_id], name: entity_params[:name],
                          amount: entity_params[:amount])
 
@@ -35,7 +35,7 @@ class EntitiesController < ApplicationController
     respond_to do |format|
       if @entity.save
         params[:entity][:group_ids].each do |group_id|
-          GroupsEntity.create(group_id: group_id, entity_id: @entity.id)
+          GroupsEntity.create(group_id:, entity_id: @entity.id)
         end
         format.html { redirect_to group_entities_url, notice: 'Transaction was successfully created.' }
         format.json { render :show, status: :created, location: @entity }
