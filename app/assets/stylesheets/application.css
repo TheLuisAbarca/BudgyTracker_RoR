@@ -13,3 +13,63 @@
  *= require_tree .
  *= require_self
  */
+@font-face {
+  font-family: "proxima-nova-bold", "san-serif";
+  src: url('Proxima-Nova-Bold.otf') format('opentype');
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
+body {
+  font-family: "proxima-nova-bold", sans-serif !important;
+  min-width: 327px;
+}
+
+.bg-blue {
+  background-color: #3978c2 !important;
+}
+
+.nav-icon-white {
+  font-size: 50px !important;
+}
+
+.bg-gray {
+  background-color: #f0f3f2;
+}
+
+.wrapper-groups-btn {
+  height: 82vh !important;
+  overflow-y: scroll !important;
+}
+
+.shadow {
+  box-shadow: 0 0 10px #000;
+}
+
+.group-btn {
+  position: absolute;
+  bottom: 0;
+}
+
+.nav-login-pg {
+  height: 90px;
+}
+
+.word-splash {
+  margin-top: 20vh;
+}
+
+.format-register-btn {
+  margin-top: 35vh;
+}
+
+.user-img {
+  height: 100px;
+  width: 100px;
+}
+
+.bg-green-btn {
+  background-color: #5fb523 !important;
+}

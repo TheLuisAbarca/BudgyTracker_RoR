@@ -1,0 +1,16 @@
+<%= render 'shared/nav', name:"CATEGORIES", path: ""%>
+<%= render 'shared/system_msgs'%>
+
+<div id="groups">
+  <div class="wrapper-groups-btn">
+    <% @groups.each do |group| %>
+      <%= link_to group do  %>
+        <%= render group %>
+      <% end %>
+    <% end %>
+    <%= link_to new_group_path , class:"group-btn bg-green-btn text-white text-decoration-none form-control p-4 text-center" do %>
+      <i class="fas fa-plus"></i>
+      <span class="">New Category</span>  
+    <% end %>
+  </div>
+</div>

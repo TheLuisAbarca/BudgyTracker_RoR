@@ -1,0 +1,24 @@
+<%= render 'shared/nav', name:"TRANSACTIONS", path: groups_path %>
+<%= render 'shared/system_msgs'%>
+
+<div id="entities">
+  <div class="wrapper-groups-btn">
+    <div class="d-flex justify-content-between align-items-center bg-light p-2 m-3"> 
+      <img src="<%= @group.icon %>" class="user-img" alt="Picture of Category <%= @group.name %>"></img>
+      <span><%= @group.name%></span>
+      <div class="fw-bold">
+        $<%=@entities.reduce(0) { |sum, entity| sum + entity.amount }%>
+      </div>
+    </div>
+    <% @entities.each do |entity| %>
+      <%= render entity %>
+      <!--p>
+        <%= link_to "Show this entity", group_entity_path(params[:group_id], id: entity.id) %>
+      </p-->
+    <% end %>
+    <%= link_to new_group_entity_path(params[:group_id]), class:"group-btn bg-green-btn text-white text-decoration-none form-control p-4 text-center" do%>
+      <i class="fas fa-plus"></i>
+      <span class="">New Transaction</span>
+    <% end %>
+  </div>
+</div>
