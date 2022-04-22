@@ -5,7 +5,7 @@ RSpec.describe 'Entities', type: :feature do
     before(:each) do
       @user = User.create!(name: 'Ashley', email: 'kabarca@gmail.com', password: '123456',
                            password_confirmation: '123456')
-      @group1 = Group.create!(id:1, name: 'name1', icon: 'wwww.testicon.com', author_id: @user.id)
+      @group1 = Group.create!(id: 1, name: 'name1', icon: 'wwww.testicon.com', author_id: @user.id)
       @entity1 = @group1.entities.create(name: 'Extra Jobs', amount: 55, author_id: @user.id)
       visit new_user_session_path
       fill_in 'Email', with: 'kabarca@gmail.com'
