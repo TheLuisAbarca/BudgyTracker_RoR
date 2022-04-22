@@ -11,6 +11,14 @@
     </div>
   <% end %>
 
+  <div class="d-flex flex-wrap justify-content-center align-items-center p-2">
+    <% Group.where(author_id: current_user.id).each_with_index do |g , i| %>
+      <span class="px-1">
+         <%= form.check_box :group_ids, {multiple: true}, g.id, nil %><%= g.name%>
+      </span>
+    <% end %>
+  </div>
+
   <div>
     <%= form.hidden_field :author_id , value: current_user.id%>
   </div>
@@ -24,7 +32,7 @@
   </div>
 
   <div>
-    <%= button_tag( :class => "group-btn bg-success text-white text-decoration-none form-control p-4 text-center") do %>
+    <%= button_tag( :class => "group-btn bg-green-btn text-white text-decoration-none form-control p-4 text-center") do %>
       Save <i class="far fa-save"></i>
     <% end %>
   </div>

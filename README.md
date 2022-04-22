@@ -7,6 +7,11 @@
 > The Budgy Tracker app is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
 ## Live Demo
+https://budgy-tracker.herokuapp.com/
+
+
+## Video Link
+![Video](https://drive.google.com/file/d/1QBEONZyW606kHD37lGVAjBu4u_ZlltNe/view?usp=sharing)
 
 ## Built With
 
@@ -33,14 +38,17 @@ To get a local copy up and running follow these simple example steps.
 ## Tests
 
 - If you want to run some unit tests, all you need to do is:
-- Execute the seed on the database: 
-- > `rails RAILS_ENV=test db:seed`
 - On your terminal execute:
   > `gem install rspec`
-- Run the `rspec` command in this case over the path of `spec/`, the resulting command will look like this:
-  > `rspec spec/`
+NOTE: THIS IS IMPORTANT!
+- Execute the seed on the database environment TEST: 
+  > `rails RAILS_ENV=test db:seed`
+
+After that, you can run the tests by executing the following steps:
+- Run the `rspec` command in this case over the path of `spec/yourspecificfolderwithtests`, the resulting command will look like this:
+  > `rspec spec/models/your_model_spec.rb`
 - If you want to run the tests over the entire project, you can execute the following command:
-  > `rspec`
+  > `rspec spec/`
 
 ## Authors
 
