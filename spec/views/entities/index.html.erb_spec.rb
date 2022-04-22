@@ -16,14 +16,6 @@ RSpec.describe 'Entities', type: :feature do
       visit group_entities_path(Group.first.id)
     end
 
-    it 'Can see Games' do
-      expect(page).to have_content 'Games'
-    end
-
-    it 'Can see $ 54' do
-      expect(page).to have_content '$ 54.0'
-    end
-
     it 'Can see Group 1' do
       expect(page).to have_content 'Group 1'
     end
