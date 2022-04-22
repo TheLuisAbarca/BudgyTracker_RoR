@@ -38,14 +38,17 @@ To get a local copy up and running follow these simple example steps.
 ## Tests
 
 - If you want to run some unit tests, all you need to do is:
-- Execute the seed on the database: 
-- > `rails RAILS_ENV=test db:seed`
 - On your terminal execute:
   > `gem install rspec`
-- Run the `rspec` command in this case over the path of `spec/`, the resulting command will look like this:
-  > `rspec spec/`
+NOTE: THIS IS IMPORTANT!
+- Execute the seed on the database environment TEST: 
+  > `rails RAILS_ENV=test db:seed`
+
+After that, you can run the tests by executing the following steps:
+- Run the `rspec` command in this case over the path of `spec/yourspecificfolderwithtests`, the resulting command will look like this:
+  > `rspec spec/models/your_model_spec.rb`
 - If you want to run the tests over the entire project, you can execute the following command:
-  > `rspec`
+  > `rspec spec/`
 
 ## Authors
 
